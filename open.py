@@ -42,10 +42,10 @@ broid=str(input(W +"              ◎~"+ C +"Enter Number"+ W +"⇒ "+ G))
 
 if broid == "1":
   system('bash Android.sh')
-system('python3 Dark.py')
 
 if broid == "2":
   system('bash iPhone.sh')
-system('python3 Dark.py')
+
 if broid == "0":
   system('bash exit.sh')
+exit()
