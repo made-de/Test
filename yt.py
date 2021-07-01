@@ -20,9 +20,15 @@ print('''\033[1;31m                                            oOOOOOOOOOOOOOOoo
  "MM,   YMM   ""`  MMM    MMMMMM  M'  "MMMYMM   ""`
 ''')
 
-
-                                                                                                                                                                                file=input('File > ')                                                                   openfile=open(file, 'r')                                                                readfile=openfile.read()
-openfile.close()                                                                        newcode=readfile.replace('eval', 'echo')                                                outfile=input('Output > ')                                                              newfile=open(outfile, 'w')                                                              newfile.write(newcode)                                                                  newfile.close()
+file=input('File > ')
+openfile=open(file, 'r')
+readfile=openfile.read()
+openfile.close()
+newcode=readfile.replace('eval', 'echo')
+outfile=input('Output > ')
+newfile=open(outfile, 'w')
+newfile.write(newcode)
+newfile.close()
 system('touch tools.sh')
 system( 'bash '+outfile+'> tools.sh')
 remove(outfile)
